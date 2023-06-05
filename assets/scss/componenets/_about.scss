@@ -1,0 +1,82 @@
+/*
+-----------------------------------------------------------------------
+  About CSS
+-----------------------------------------------------------------------
+*/
+
+.about-default-wrapper {
+  .container {
+    padding-bottom: 110px;
+    padding-top: 104px;
+    @media #{$lg-device} {
+      padding-bottom: 90px;
+      padding-top: 85px;
+    }
+  }
+}
+
+.about-thumb {
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.about-content {
+  @media #{$md-device} {
+    margin-top: 60px;
+    text-align: left;
+  }
+  .sub-title {
+    color: #444141;
+    font-size: 48px;
+    font-weight: $font-weight-light;
+    letter-spacing: .14px;
+    line-height: 1;
+    margin-bottom: 9px;
+    text-transform: capitalize;
+    @media #{$lg-device} {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+    @media #{$md-device} {
+      font-size: 26px;
+    }
+    @media #{$sm-device} {
+      font-size: 22px;
+    }
+  }
+  .title {
+    color: #444141;
+    font-size: 60px;
+    font-weight: $font-weight-bold;
+    letter-spacing: .14px;
+    margin-bottom: 35px;
+    text-transform: capitalize;
+    @media #{$lg-device} {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+    @media #{$md-device} {
+      font-size: 42px;
+      margin-bottom: 12px;
+    }
+    @media #{$sm-device} {
+      font-size: 35px;
+    }
+  }
+  .desc {
+    color: #3a3a3a;
+    margin-bottom: 39px;
+    margin-right: -1px;
+    @media #{$lg-device} {
+      margin-bottom: 30px;
+      margin-right: 0;
+    }
+    @media #{$md-device} {
+      margin-bottom: 25px;
+    }
+    @media #{$sm-device} {
+      font-size: 15px;
+    }
+  }
+  .btn-theme {}
+}

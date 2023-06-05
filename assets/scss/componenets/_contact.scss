@@ -1,0 +1,292 @@
+/*
+-----------------------------------------------------------------------
+    Contact CSS
+-----------------------------------------------------------------------
+*/
+
+.contact-area {
+  &.contact-page-area {
+    .container {
+      padding-top: 110px;
+      padding-bottom: 80px;
+      @media #{$lg-device} {
+        padding-top: 85px;
+        padding-bottom: 65px;
+      }
+    }
+  }
+}
+
+.contact-page-wrapper {
+  .contact-form-wrap {
+    box-shadow: -4px 0px 20px 0px rgba($black, .1);
+    background-color: $white;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    padding: 71px 60px 83px;
+    z-index: 1;
+    @media #{$md-device} {
+      padding: 51px 40px 56px;
+    }
+    @media #{$xs-device} {
+      padding: 36px 20px 40px;
+    }
+    .contact-form-title {
+      .title {
+        font-size: 48px;
+        font-weight: $font-weight-medium;
+        line-height: 1.234;
+        margin-bottom: 47px;
+        @media #{$lg-device} {
+          font-size: 34px;
+          margin-bottom: 40px;
+        }
+        @media #{$md-device} {
+          font-size: 28px;
+          margin-bottom: 26px;
+        }
+      }
+    }
+  }
+}
+
+.contact-info-wrap {
+  @media #{$lg-device} {
+    margin-top: 30px;
+  }
+  .contact-info {
+    .info-item {
+      border-radius: 10px;
+      background-color: $white;
+      box-shadow: -4px 0px 20px 0px rgba($black, .1);
+      margin-bottom: 30px;
+      padding: 40px 30px 32px;
+      text-align: center;
+      .icon {
+        margin-bottom: 26px;
+      }
+      .info {
+        .title {
+          font-weight: 500;
+          font-size: 24px;
+          color: #2e2e2e;
+          text-transform: capitalize;
+          margin-bottom: 15px;
+        }
+        p {
+          color: $black;
+          line-height: 1.8125;
+        }
+        a {
+          color: $black;
+          line-height: 1.8125;
+          &:hover {
+            color: $theme-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.contact-map-area {
+  height: 600px;
+  iframe {
+    height: 600px;
+    width: 100%;
+  }
+}
+
+.account-area {
+  .container {
+    padding-top: 95px;
+    padding-bottom: 100px;
+    @media #{$lg-device} {
+      padding-top: 70px;
+      padding-bottom: 75px;
+    }
+  }
+  .section-title {
+    border-bottom: 1px solid #e8e8e8;
+    max-width: 570px;
+    margin: 0 auto 40px;
+    padding-bottom: 14px;
+    .title {
+      font-size: 44px;
+      margin-bottom: 0;
+      line-height: 1.4;
+      @media #{$sm-device} {
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+// My Account Table
+.my-account-area {
+  padding: 110px 0 110px;
+  @media #{$lg-device} {
+    padding: 90px 0 90px;
+  }
+}
+.myaccount-tab-menu {
+  flex-direction: column;
+  @media #{$sm-device} {
+    margin-bottom: 40px;
+  }
+  &.nav-tabs {
+    .nav-link {
+      background-color: transparent;
+      border: 1px solid #e5e5e5;
+      border-bottom: none;
+      border-radius: 0;
+      color: $black;
+      font-family: $font-current-theme1;
+      font-size: 15px;
+      font-weight: 500;
+      display: block;
+      padding: 10px 15px;
+      text-align: left;
+      text-transform: capitalize;
+      &:last-child {
+        border-bottom: 1px solid #e5e5e5;
+      }
+      &.active {
+        background-color: $theme-color;
+      }
+      &:hover,
+      &.active {
+        background-color: $theme-color;
+        border-color: $theme-color;
+        color: $white;
+      } 
+    }
+  }
+}
+
+.myaccount-content {
+  border: 1px solid #eeeeee;
+  padding: 30px 30px 15px;
+  @media #{$lg-device} {
+    padding: 25px 25px 10px;
+  }
+  form {
+    margin-top: -20px;
+  }
+  h3 {
+    font-family: $font-current-theme1;
+    font-weight: 500;
+    font-size: 20px;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    @media #{$md-device} {
+      font-size: 18px;
+    }
+  }
+  .welcome {
+    a {
+      font-family: $font-current-theme1;
+      &:hover {
+        color: $theme-color;
+      }
+    }
+    strong {
+      font-family: $font-current-theme1;
+      font-weight: 600;
+      color: $theme-color;
+    }
+  }
+  p {
+    font-family: $font-current-theme1;
+    line-height: 28px;
+    margin-bottom: 6px;
+    @media #{$md-device} {
+      font-size: 15px;
+    }
+  }
+  fieldset {
+    margin-top: 20px;
+    & legend {
+      font-family: $font-current-theme1;
+      font-size: 16px;
+      margin-bottom: 20px;
+      font-weight: 600;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #e5e5e5;
+      @media #{$md-device} {
+        font-size: 15px;
+      }
+    }
+  }
+  .account-details-form {
+    margin-top: 50px;
+    .single-input-item {
+      margin-bottom: 20px;
+      label {
+        font-family: $font-current-theme1;
+        font-size: 14px;
+        text-transform: capitalize;
+        display: block;
+        margin: 0 0 5px;
+      }
+      input {
+        border: 1px solid #e8e8e8;
+        width: 100%;
+        height: 50px;
+        background-color: transparent;
+        padding: 2px 20px;
+        color: #1f2226;
+        font-family: $font-current-theme1;
+        font-size: 13px;
+        &:focus {
+          border: 1px solid #343538;
+        }
+      }
+      button {
+        border: none;
+        background-color: $theme-color;
+        text-transform: uppercase;
+        font-family: $font-current-theme1;
+        font-weight: 600;
+        padding: 20px 40px;
+        line-height: 1;
+        color: #fff;
+        font-size: 13px;
+        &:hover {
+          background-color: #1f2226;
+        }
+      }
+    }
+  }
+}
+
+.myaccount-table {
+  white-space: nowrap;
+  font-family: $font-current-theme1;
+  font-size: 14px;
+  table,
+  .table {
+    th {
+      padding: 10px;
+      font-family: $font-current-theme1;
+      font-weight: 600;
+      background-color: #f8f8f8;
+      border-color: #ccc;
+      border-bottom: 0;
+      color: #1f2226;
+    }
+
+    td {
+      padding: 10px;
+      vertical-align: middle;
+      border-color: #ccc;
+      a {
+        font-family: $font-current-theme1;
+        font-size: 14px;
+        color: $black;
+      }
+    }
+  }
+}

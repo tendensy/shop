@@ -1,0 +1,252 @@
+/*
+-----------------------------------------------------------------------
+  Footer CSS
+-----------------------------------------------------------------------
+*/
+
+.footer-area {
+  background-color: #26292e;
+
+  .widget-item {
+    @media #{$md-device} {
+      margin-bottom: 35px;
+    }
+    .widget-title {
+      color: $white;
+      font-size: 24px;
+      font-weight: $font-weight-medium;
+      margin-bottom: 20px;
+      @media #{$lg-device} {
+        font-size: 22px;
+        margin-bottom: 15px;
+      }
+      @media #{$sm-device} {
+        display: none;
+      }
+    }
+  }
+
+  .widget-menu-wrap {
+    .nav-menu {
+      li {
+        font-size: 16px;
+        font-weight: $font-weight-light;
+        line-height: 2;
+        @media #{$lg-device} {
+          font-size: 15px;
+        }
+        + {
+          li {}
+        }
+      }
+    }
+  }
+
+  .widget-contact-wrap {
+    ul {
+      & > li {
+        color: #cacaca;
+        font-size: 16px;
+        line-height: 2.0625;
+        font-weight: $font-weight-light;
+        @media #{$lg-device} {
+          font-size: 15px;
+        }
+        & > span {
+          font-weight: $font-weight-normal;
+        }
+        & > a {}
+      }
+    }
+  }
+
+  .widget-collapsed-title {
+    display: block;
+    position: relative;
+    background-color: #36393f;
+    border: 1px solid #36393f;
+    height: 65px;
+    line-height: 64px;
+    padding: 0 24px;
+    border-radius: 0;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 0;
+    color: #fff;
+    font-weight: 500;
+    @media #{$md-up-device} {
+      display: none;
+    }
+    &:before {
+      font-family: "IcoFont";
+      font-size: 14px;
+      content: "\efc2";
+      position: absolute;
+      right: 0;
+      height: 100%;
+      width: 60px;
+      text-align: center;
+    }
+    &:not(.collapsed) {
+      &:before {
+        content: "\ef9a";
+        font-family: "IcoFont";
+      }
+    }
+  }
+
+  .widget-collapse-body {
+    @include transition(all .3s ease-out);
+    @media #{$md-up-device} {
+      display: block;
+    }
+    @media #{$sm-device} {
+      background-color: #26292e;
+      border: 1px solid #36393f;
+    }
+    .collapse-body {
+      @media #{$sm-device} {
+        padding: 27px 25px 0;
+      }
+    }
+  }
+}
+
+.footer-main {
+  padding: 104px 0 70px;
+  @media #{$lg-device} {
+    padding: 85px 0 52px;
+  }
+  @media #{$md-device} {
+    padding: 85px 0 40px;
+  }
+  @media #{$sm-device} {
+    padding: 85px 0 61px;
+  }
+  a {
+    color: #cacaca;
+    &:hover {
+      color: $theme-color;
+    }
+  }
+  p {
+    color: #cacaca;
+    font-size: 16px;
+    line-height: 2;
+    @media #{$lg-device} {
+      font-size: 15px;
+    }
+  }
+  .about-widget-wrap {
+    margin-top: -10px;
+    @media #{$lg-device} {
+      margin-top: 0;
+    }
+    @media #{$sm-device} {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+    .desc {
+      margin-bottom: 29px;
+      @media #{$lg-device} {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .widget-logo-area {
+    margin-bottom: 26px;
+    @media #{$lg-device} {
+      margin-bottom: 21px;
+    }
+  }
+  .social-icons {
+    display: flex;
+    margin-bottom: 0;
+    @media #{$sm-device} {
+      justify-content: center;
+    }
+    a {
+      display: inline-block;
+      background-color: #5d5d5d;
+      color: #fff;
+      width: 36px;
+      height: 36px;
+      text-align: center;
+      line-height: 37px;
+      font-size: 16px;
+      border-radius: 7px;
+      @media #{$lg-device} {
+        width: 32px;
+        height: 32px;
+        line-height: 33px;
+        font-size: 13px;
+      }
+      + {
+        a {
+          margin-left: 10px;
+        }
+      }
+      &:hover {
+        background-color: $theme-color;
+        color: $white;
+      }
+    }
+  }
+  .widget-item {
+    @media #{$sm-device} {
+      margin-bottom: 25px;
+    }
+    &.widget-services-item {
+      padding-left: 52px;
+      @media #{$md-device} {
+        padding-left: 0;
+      }
+    }
+    &.widget-account-item {
+      padding-left: 29px;
+      @media #{$md-device} {
+        padding-left: 0;
+      }
+    }
+  }
+}
+
+.footer-bottom {
+  background-color: #36393f;
+  padding: 19px 0 19px;
+  @media #{$sm-device} {
+    padding: 19px 0 27px;
+  }
+  .payment {
+    text-align: right;
+    @media #{$sm-device} {
+      text-align: center;
+    }
+  }
+  .copyright {
+    color: #cacaca;
+    font-size: 16px;
+    line-height: 1.75;
+    position: relative;
+    top: 5px;
+    @media #{$lg-device} {
+      font-size: 15px;
+      top: 6px;
+    }
+    @media #{$sm-device} {
+      text-align: center;
+      margin-bottom: 18px;
+    }
+    a {
+      color: #cacaca;
+      &:hover {
+        color: $white;
+      }
+    }
+    i {
+      color: $theme-color;
+      font-size: 16px;
+      margin: 0 2px;
+    }
+  }
+}

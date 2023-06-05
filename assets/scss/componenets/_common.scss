@@ -1,0 +1,433 @@
+/*
+-----------------------------------------------------------------------
+  Common CSS
+-----------------------------------------------------------------------
+*/
+
+/*-------- Background Style Css --------*/
+.bg-img {
+  background: no-repeat center center;
+  background-size: cover;
+
+  &-tr {
+    background: no-repeat top right;
+  }
+
+  &-tl {
+    background: no-repeat top left;
+  }
+
+  &-br {
+    background: no-repeat bottom right;
+  }
+
+  &-bl {
+    background: no-repeat bottom left;
+  }
+
+  &-nr {
+    background: no-repeat center center;
+    background-size: contain;
+  }
+
+  &-rc {
+    background: no-repeat;
+    background-size: contain;
+  }
+}
+
+.parallax {
+  background-size: cover;
+  background-repeat: no-repeat
+}
+
+/*-------- Container Style Css --------*/
+.wrapper {
+  overflow-x: hidden;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  @media #{$xl-down-device} {
+    max-width: 1200px;
+  }
+}
+
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+  & > [class*=col-] {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+/*-------- Gutter Style Css --------*/
+.no-gutter {
+  margin-right: 0;
+  margin-left: 0;
+  .col,
+  [class*=col-] {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.row-gutter-50 {
+  margin-right: -25px;
+  margin-left: -25px;
+  .col,
+  [class*=col-] {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
+/*-------- Spacing Style Css --------*/
+.container,
+.container-fluid {
+  padding-bottom: 80px;
+  padding-top: 110px;
+  @media #{$lg-device} {
+    padding-bottom: 54px;
+    padding-top: 85px;
+  }
+}
+
+/*-------- Button Style Css --------*/
+.btn-theme {
+  background-color: $theme-color;
+  border: 2px solid $theme-color;
+  color: $white;
+  display: inline-block;
+  font-weight: $font-weight-semi-bold;
+  font-size: 18px;
+  line-height: 1;
+  padding: 22px 62px 21px;
+  @include transition(all .3s ease-out);
+  @media #{$lg-device} {
+    font-weight: $font-weight-medium;
+    padding: 14px 28px 14px;
+    font-size: 16px;
+  }
+  @media #{$md-device} {
+    padding: 12px 26px 13px;
+    font-size: 15px;
+  }
+  &:hover {
+    background-color: $white;
+    border-color: $theme-color;
+    color: $theme-color;
+  }
+  &.btn-sm {
+    font-weight: $font-weight-medium;
+    padding: 14px 28px 13px;
+    font-size: 16px;
+    @media #{$sm-device} {
+      padding: 11px 24px 11px;
+      font-size: 15px;
+    }
+  }
+}
+
+.btn-theme-border {
+  background-color: transparent;
+  border: 2px solid $theme-color;
+  color: $theme-color;
+  display: inline-block;
+  font-weight: $font-weight-semi-bold;
+  font-size: 18px;
+  line-height: 1;
+  padding: 21px 62px 22px;
+  @include transition(all .3s ease-out);
+  @media #{$lg-device} {
+    font-weight: $font-weight-medium;
+    padding: 14px 28px 14px;
+    font-size: 16px;
+  }
+  @media #{$md-device} {
+    padding: 12px 26px 13px;
+    font-size: 15px;
+  }
+  &:hover {
+    background-color: $theme-color;
+    border-color: $theme-color;
+    color: $white;
+  }
+}
+
+.btn-link {
+  color: $theme-color2;
+  font-size: 16px;
+  font-weight: $font-weight-medium;
+  text-decoration: underline;
+  &:hover {
+    color: $theme-color;
+    text-decoration: underline;
+  }
+}
+
+/*-------- Z Index Style Css --------*/
+.z-index--1 {
+  z-index: -1;
+}
+
+.z-index-1 {
+  z-index: 1;
+}
+
+.z-index-2 {
+  z-index: 2;
+}
+
+/*-------- Fancybox Images Style Css --------*/
+.fancybox-slide {
+  cursor: url('../img/icons/cancel-white.webp'), auto;
+}
+
+/*-------- Page Header Style Css --------*/
+.page-header-area {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top right;
+  padding: 140px 0 146px;
+  @media #{$lg-device} {
+    padding: 120px 0 126px;
+  }
+  @media #{$md-device} {
+    padding: 100px 0 106px;
+  }
+}
+
+.page-header-content {
+  text-align: center;
+  .title {
+    color: #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 58px;
+    letter-spacing: 0;
+    margin: 0 0 22px 0;
+    line-height: 1;
+    @media #{$lg-device} {
+      font-size: 48px;
+      margin: 0 0 14px 0;
+    }
+    @media #{$md-device} {
+      font-size: 40px;
+      margin: 0 0 8px 0;
+    }
+    @media #{$sm-device} {
+      font-size: 36px;
+    }
+    @media #{$xxs-device} {
+      font-size: 30px;
+    }
+  }
+}
+
+.breadcrumb-area {
+  margin-bottom: 0;
+
+  .breadcrumb {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    flex-wrap: unset;
+    letter-spacing: 0;
+    line-height: 1;
+    margin-bottom: 0;
+    padding: 0;
+
+    li {
+      color: $theme-color;
+      font-size: 24px;
+      line-height: 1;
+      text-transform: uppercase;
+      @media #{$lg-device} {
+        font-size: 20px;
+      }
+      @media #{$md-device} {
+        font-size: 18px;
+      }
+      @media #{$sm-device} {
+        font-size: 16px;
+      }
+      a {
+        color: $white;
+
+        &:hover {
+          color: $theme-color;
+        }
+      }
+    }
+
+    .breadcrumb-sep {
+      letter-spacing: -2.5px;
+      margin: 0 12px 0 11px;
+      vertical-align: 0;
+    }
+  }
+}
+
+/*-------- Pagination Style Css --------*/
+.pagination-items {
+  margin-top: 32px;
+  margin-bottom: 30px;
+  & .pagination {
+    & li {
+      display: inline-block;
+
+      + {
+        li {
+          margin-left: 20px;
+        }
+      }
+
+      & a {
+        background-color: transparent;
+        border: 2px solid #e1e1e1;
+        border-radius: 5px;
+        color: #9e9e9e;
+        display: inline-block;
+        font-size: 18px;
+        font-weight: $font-weight-semi-bold;
+        height: 50px;
+        line-height: 48px;
+        @include transition(0.3s);
+        text-align: center;
+        width: 50px;
+
+        &.active {
+          border-color: $theme-color;
+          color: $theme-color;
+        }
+
+        &:hover {
+          border-color: $theme-color;
+          color: $theme-color;
+        }
+      }
+    }
+  }
+}
+
+/*-------- Custom Font Style Css --------*/
+.font-weight-300 {
+  font-weight: $font-weight-light !important;
+}
+
+.font-weight-400 {
+  font-weight: $font-weight-normal !important;
+}
+
+.font-weight-600 {
+  font-weight: $font-weight-semi-bold !important;
+}
+
+.font-weight-700 {
+  font-weight: $font-weight-bold !important;
+}
+
+.font-weight-900 {
+  font-weight: $font-weight-black !important;
+}
+
+/*-------- Custom Color Style Css --------*/
+.bg-theme-color {
+  background-color: $theme-color !important;
+}
+
+.bg-color-f2 {
+  background-color: $white-f2;
+}
+
+/*-------- Margin & Padding Custom Style Css --------*/
+.m--0 {margin: 0 !important;}
+.mb--0 {margin-bottom: 0 !important;}
+.mb-25 {margin-bottom: 25px !important;}
+.ml--0 {margin-left: 0 !important;}
+.mr--0 {margin-right: 0 !important;}
+.mt--0 {margin-top: 0 !important;}
+@media #{$md-device} {
+  .mt-md-30 {margin-top: 30px !important;}
+}
+@media #{$xs-device} {
+  .mt-xs-30 {margin-top: 30px !important;}
+}
+.p--0 {padding: 0 !important;}
+.pb--0 {padding-bottom: 0 !important;}
+@media #{$lg-device} {
+  .pb-lg-85 {padding-bottom: 85px !important;}
+}
+.pl--0 {padding-left: 0 !important;}
+.pr--0 {padding-right: 0 !important;}
+.pt--0 {padding-top: 0 !important;}
+
+/*-------- Scroll To Top Style Css --------*/
+.scroll-to-top {
+  box-shadow: 0 0 8px 1px rgb(0 0 0 / 20%);
+  bottom: -60px;
+  background-color: $theme-color;
+  color: $white;
+  position: fixed;
+  right: 2%;
+  display: block;
+  padding: 0;
+  width: 35px;
+  height: 35px;
+  border-radius: 0;
+  text-align: center;
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 700;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  @include transition (all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1));
+  @include rotate(45);
+  z-index: 999;
+  @media #{$md-device} {
+    right: 2%;
+    padding: 0 0 2px 0;
+    width: 24px;
+    height: 24px;
+    font-size: 16px;
+    line-height: 23px;
+  }
+
+  span {
+    @include rotate(-45);
+  }
+
+  &:hover {
+    background-color: $theme-color2;
+  }
+
+  &.show {
+    visibility: visible;
+    opacity: 1;
+    bottom: 35px;
+    @media #{$md-device} {
+      bottom: 25px;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+
+.fixed {
+  position: fixed;
+  display: block;
+  right: 0;
+  top: 150px;
+  padding-right: 230px !important;
+}

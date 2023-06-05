@@ -1,0 +1,85 @@
+/*
+-----------------------------------------------------------------------
+  Page Not Found CSS
+-----------------------------------------------------------------------
+*/
+.page-not-found-area {
+  border-bottom: 4px solid $theme-color;
+  @media #{$md-device} {
+    border-top: 4px solid $theme-color;
+  }
+}
+.page-not-found-wrap {
+  padding-bottom: 130px;
+  padding-top: 110px;
+  @media #{$lg-device} {
+    padding-bottom: 100px;
+    padding-top: 82px;
+  }
+  @media #{$sm-device} {
+    padding-top: 90px;
+  }
+  .page-not-found-content {
+    text-align: center;
+    .not-found-text {
+      color: $theme-color;
+      font-size: 170px;
+      letter-spacing: -3px;
+      line-height: 1;
+      margin: 0;
+      @media #{$lg-device} {
+        font-size: 140px;
+      }
+      @media #{$md-device} {
+        font-size: 110px;
+      }
+      @media #{$sm-device} {
+        font-size: 90px;
+      }
+    }
+    .title {
+      text-transform: capitalize;
+      font-weight: 700;
+      font-size: 38px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      letter-spacing: -.5px;
+      @media #{$lg-device} {
+        font-size: 34px;
+        margin-top: 5px;
+        margin-bottom: 15px;
+      }
+      @media #{$md-device} {
+        font-size: 31px;
+        margin-top: 4px;
+        margin-bottom: 15px;
+      }
+      @media #{$sm-device} {
+        font-size: 24px;
+        margin-top: 0;
+        margin-bottom: 11px;
+      }
+    }
+    .desc {
+      @media #{$lg-device} {
+        margin-bottom: 22px;
+      }
+      @media #{$sm-device} {
+        margin-bottom: 19px;
+        font-size: 15px;
+      }
+    }
+    .btn-theme-border {
+      padding: 18px 44px 19px;
+      @include transition(all .4s ease-out);
+      @media #{$lg-device} {
+        padding: 14px 28px 14px;
+        font-size: 16px;
+      }
+      @media #{$md-device} {
+        padding: 12px 26px 13px;
+        font-size: 15px;
+      }
+    }
+  }
+}

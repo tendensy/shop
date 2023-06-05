@@ -1,0 +1,407 @@
+/*
+-----------------------------------------------------------------------
+    Home Slider CSS
+-----------------------------------------------------------------------
+*/
+
+.home-slider-area {
+  .home-slider-container {
+    position: relative;
+    .home-slider-wrapper {
+      position: relative;
+      &.slider {
+        &-default {
+            .swiper-slide {
+              &-active {
+                .slider-content-area {
+                  .slider-content {
+                    .title-box,
+                    .desc-box,
+                    .btn-box  {
+                      opacity: 1;
+                      @include translate(0px, 0px);
+                    }
+                  }
+                  .slider-thumb {
+                    .thumb {
+                      img {
+                        opacity: 1;
+                        @include translate(0px, 0px);
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+          .slider-content-area {
+            align-items: center;
+            background-size: cover;
+            background-position: top right;
+            display: flex;
+            height: 748px;
+            position: relative;
+            @media #{$lg-device} {
+              height: 600px;
+            }
+            @media #{$md-device} {
+              height: 490px;
+            }
+            @media #{$sm-device} {
+              height: 430px;
+            }
+            @media #{$xs-device} {
+              height: auto;
+            }
+            .container {
+              padding-bottom: 0;
+              padding-top: 0;
+            }
+            .slider-text-shape {
+              bottom: 56px;
+              position: absolute;
+              font-size: 92px;
+              letter-spacing: 28px;
+              font-weight: 800;
+              -webkit-text-fill-color: transparent;
+              -webkit-text-stroke-width: 1px;
+              -webkit-text-stroke-color: #5aa0f2;
+              line-height: 1;
+              margin: 0;
+              writing-mode: vertical-lr;
+              @include rotate(180);
+              left: -22px;
+              @media #{$xl-device} {
+                @include rotate(0);
+                writing-mode: inherit;
+                bottom: 0;
+                left: 8px;
+              }
+              @media #{$lg-device} {
+                font-size: 72px;
+              }
+              @media #{$md-device} {
+                font-size: 55px;
+              }
+              @media #{$sm-device} {
+                font-size: 35px;
+              }
+              @media #{$xs-device} {
+                display: none;
+              }
+            }
+            .slider-container {}
+
+            .slider-content {
+              margin-top: -18px;
+              @media #{$xs-device} {
+                margin-top: 70px;
+                text-align: center;
+                margin-bottom: 40px;
+              }
+
+              .title-box,
+              .desc-box,
+              .btn-box {
+                opacity: 0;
+                @include transition(all .6s ease-out);
+              }
+
+              .title-box {
+                @include translate(0px, 35px);
+                transition-delay: .4s;
+              }
+              .desc-box {
+                @include translate(0px, 30px);
+                transition-delay: 1.2s;
+              }
+              .btn-box {
+                @include translate(0px, 25px);
+                transition-delay: 1.9s;
+              }
+
+              .title {
+                color: $white;
+                font-size: 80px;
+                line-height: 1.1375;
+                margin-bottom: 17px;
+                margin-left: -4px;
+                text-transform: uppercase;
+                @media #{$lg-device} {
+                  font-size: 60px;
+                  margin-bottom: 8px;
+                }
+                @media #{$md-device} {
+                  font-size: 47px;
+                }
+                @media #{$sm-device} {
+                  font-size: 40px;
+                }
+                @media #{$xs-device} {
+                  font-size: 28px;
+                  margin-left: 0;
+                  margin-bottom: 4px;
+                }
+              }
+              .desc {
+                color: $white;
+                font-size: 24px;
+                text-transform: uppercase;
+                margin-bottom: 54px;
+                @media #{$lg-device} {
+                  font-size: 19px;
+                  margin-bottom: 34px;
+                }
+                @media #{$md-device} {
+                  font-size: 17px;
+                  margin-bottom: 24px;
+                }
+                @media #{$sm-device} {
+                  font-size: 16px;
+                }
+                @media #{$xs-device} {
+                  margin-bottom: 15px;
+                }
+              }
+              .btn-slider {
+                background-color: transparent;
+                border: 2px solid $white;
+                color: $white;
+                display: inline-block;
+                font-weight: $font-weight-semi-bold;
+                font-size: 18px;
+                line-height: 1;
+                padding: 21px 62px 22px;
+                @include transition(all .3s ease-out);
+                @media #{$lg-device} {
+                  font-size: 16px;
+                  padding: 16px 42px 18px;
+                }
+                @media #{$md-device} {
+                  padding: 13px 34px 15px;
+                }
+                @media #{$sm-device} {
+                  font-size: 14px;
+                  padding: 13px 24px 14px;
+                }
+                &:hover {
+                  background-color: $theme-color;
+                  border-color: $theme-color;
+                }
+              }
+            }
+
+            .slider-thumb {
+              align-items: center;
+              display: flex;
+              justify-content: center;
+              height: 571px;
+              position: relative;
+              width: 570px;
+              z-index: 1;
+              @media #{$lg-device} {
+                height: 451px;
+                width: 450px;
+              }
+              @media #{$md-device} {
+                height: 351px;
+                width: 350px;
+              }
+              @media #{$sm-device} {
+                height: 261px;
+                width: 260px;
+              }
+              @media #{$xs-device} {
+                height: 261px;
+                width: 260px;
+                margin: 0 auto 80px;
+              }
+              .thumb {
+                right: -20px;
+                position: relative;
+                top: 20px;
+                @media #{$lg-device} {
+                  right: -10px;
+                }
+                @media #{$sm-device} {
+                  right: -5px;
+                  top: 17px
+                }
+                img {
+                  opacity: 0;
+                  @include translate(50px, 0px);
+                  @include transition(all .6s ease-out);
+                  transition-delay: .7s;
+                  @media #{$lg-device} {
+                    width: 310px;
+                  }
+                  @media #{$md-device} {
+                    width: 250px;
+                  }
+                  @media #{$sm-device} {
+                    width: 190px;
+                  }
+                }
+              }
+              .shape-group {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                &-one {
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                  left: 0;
+                  position: absolute;
+                  top: 0;
+                  width: 100%;
+                  height: 100%;
+                  border-radius: 50%;
+                }
+                &-two {
+                  position: absolute;
+                  top: 60px;
+                  left: 60px;
+                  width: 100%;
+                  height: 100%;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border-radius: 50%;
+                  @media #{$lg-device} {
+                    width: 400px;
+                    left: 32px;
+                    top: 52px;
+                  }
+                  @media #{$md-device} {
+                    width: 300px;
+                    top: 42px;
+                  }
+                  @media #{$sm-device} {
+                    width: 240px;
+                    top: 28px;
+                    left: 20px;
+                  }
+                }
+              }
+            }
+
+            &-two {
+              background-position: top right;
+              @media #{$xs-device} {
+                background-position: top;
+                height: 420px;
+              }
+
+              .slider-content {
+                @media #{$xs-device} {
+                  margin-top: 0;
+                  margin-bottom: 0;
+                }
+
+                .title-box {
+                  @include translate(0px, 30px);
+                  transition-delay: 1.2s;
+                }
+
+                .desc-box {
+                  @include translate(0px, 35px);
+                  transition-delay: .4s;
+                }
+
+                .title {
+                  font-size: 80px;
+                  line-height: 1.13;
+                  margin-bottom: 43px;
+                  @media #{$lg-device} {
+                    font-size: 64px;
+                    line-height: 1.13;
+                    margin-bottom: 32px
+                  }
+                  @media #{$md-device} {
+                    font-size: 54px;
+                  }
+                  @media #{$sm-device} {
+                    font-size: 44px;
+                    margin-left: 0;
+                    margin-bottom: 20px;
+                  }
+                  span {
+                    font-size: 58px;
+                    display: block;
+                    @media #{$md-device} {
+                      font-size: 48px;
+                    }
+                    @media #{$sm-device} {
+                      font-size: 38px;
+                    }
+                  }
+                }
+
+                .desc {
+                  margin-bottom: 13px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // Swiper Arrows
+    .swiper-btn-wrap {
+      bottom: 30px;
+      display: flex;
+      position: absolute;
+      right: 30px;
+      opacity: 0;
+      z-index: 1;
+      @include transition(all .3s ease-out);
+      @media #{$lg-device} {
+        right: 10px;
+        bottom: 10px;
+      }
+      .swiper-btn {
+        &-prev,
+        &-next {
+          border: 1px solid #fff;
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+          font-size: 34px;
+          color: #fff;
+          text-align: center;
+          line-height: 45px;
+          @media #{$lg-device} {
+            width: 30px;
+            height: 30px;
+            font-size: 18px;
+            line-height: 28px;
+          }
+        }
+
+        &-prev {
+          margin-right: 0;
+          @include transition(all .3s ease-out);
+        }
+        &-next {}
+      }
+    }
+
+    &:hover {
+      .swiper-btn-wrap {
+        opacity: 1;
+        .swiper-btn {
+          &-prev {
+            margin-right: 20px;
+            @media #{$lg-device} {
+              margin-right: 10px;
+            }
+          } 
+        }
+      }
+    }
+  }
+}

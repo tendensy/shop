@@ -1,0 +1,134 @@
+/*
+-----------------------------------------------------------------------
+    Feature CSS
+-----------------------------------------------------------------------
+*/
+
+.feature-box-wrap {
+  background-color: $white-f3;
+  border-radius: 10px;
+  display: flex;
+  padding: 80px 46px 80px 51px;
+  z-index: 1;
+  @media #{$md-device} {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 26px 8px 30px;
+  }
+  .col-item {
+    margin-right: 30px;
+    padding-right: 31px;
+    position: relative;
+    @media #{$md-device} {
+      width: 50%;
+      margin-right: 0;
+      margin-bottom: 30px;
+      padding-right: 0;
+    }
+    @media #{$xxs-device} {
+      width: 100%;
+    }
+    &:before {
+      background-color: #d0d0d0;
+      content: "";
+      height: 41px;
+      right: 0;
+      width: 2px;
+      position: absolute;
+      @media #{$md-device} {
+        display: none;
+      }
+    }
+    &:first-child {
+      margin-right: 40px;
+      @media #{$md-device} {
+        margin-right: 0;
+      }
+    }
+    &:last-child {
+      margin-right: 0;
+      padding-right: 0;
+      &:before {
+        display: none;
+      }
+    }
+  }
+}
+
+.feature-content-box {
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  .shape-group {
+    z-index: -1;
+    &-one {
+      left: 120px;
+      position: absolute;
+      top: 0;
+      pointer-events: none;
+      @media #{$sm-device} {
+        left: auto;
+        top: -4px;
+        width: 155px;
+        right: -40px;
+      }
+    }
+    &-two {
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      pointer-events: none;
+      @media #{$sm-device} {
+        display: none;
+      }
+    }
+    &-three {
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      pointer-events: none;
+    }
+    &-four {
+      right: 250px;
+      position: absolute;
+      top: 0;
+      pointer-events: none;
+      @media #{$md-device} {
+        right: 0;
+      }
+      @media #{$sm-device} {
+        display: none;
+      }
+    }
+  }
+}
+
+.feature-icon-box {
+  .inner-content {
+    display: flex;
+    @media #{$md-device} {
+      align-items: center
+    }
+    .icon-box {
+      .icon-img {}
+    }
+    .content {
+      margin-top: 9px;
+      margin-left: 16px;
+      @media #{$lg-device} {
+        margin-top: 0;
+      }
+      .title {
+        color: $black;
+        font-size: 18px;
+        font-weight: $font-weight-medium;
+        margin-bottom: 0;
+        line-height: 1;
+        @media #{$xxs-device} {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,98 @@
+/*
+-----------------------------------------------------------------------
+  Team CSS
+-----------------------------------------------------------------------
+*/
+
+.team-item {
+  margin-bottom: 30px;
+  @media #{$xs-device} {
+    max-width: 290px;
+    margin: 0 auto 30px;
+  }
+  .thumb {
+    position: relative;
+    overflow: hidden;
+    img {
+      border-radius: 50%;
+      width: 100%;
+    }
+    &:before {
+      background-color: $theme-color;
+      border-radius: 50%;
+      content: "";
+      left: 0;
+      height: 100%;
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      width: 100%;
+      @include transition(all .4s ease-out);
+    }
+    .member-icons {
+      bottom: 42px;
+      display: flex;
+      left: 50%;
+      margin-bottom: 40px;
+      opacity: 0;
+      position: absolute;
+      @include translate(-50%, 0%);
+      visibility: hidden;
+      @include transition(all .4s ease-out);
+      a {
+        background-color: #fff;
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        text-align: center;
+        border-radius: 7px;
+        color: #000;
+        font-size: 16px;
+        + {
+          a {
+            margin-left: 10px;
+          }
+        }
+        &:hover {
+          background-color: $theme-color;
+          color: $white;
+        }
+      }
+    }
+  }
+  .content {
+    margin-top: 25px;
+    text-align: center;
+    .title {
+      font-size: 18px;
+      font-weight: $font-weight-medium;
+      margin-bottom: 7px;
+      a {
+        color: $black;
+        &:hover {
+          color: $theme-color;
+        }
+      }
+    }
+    p {
+      color: #585757;
+      font-size: 14px;
+      font-weight: $font-weight-medium;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+  }
+  &:hover {
+    .thumb {
+      &:before {
+        opacity: .34;
+        visibility: visible;
+      }
+      .member-icons {
+        margin-bottom: 0;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
