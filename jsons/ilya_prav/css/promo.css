@@ -1,0 +1,117 @@
+.main .block_info .video 
+{
+	width: 90vh;
+	height: 50vh;
+	background: rgba(30, 18, 21, 1);
+}
+.main .block_info .video iframe 
+{
+	width: 100%;
+	height: 100%;
+}
+.main .block_info .video {
+	width: 100%;
+    height: 55vh;
+    margin-bottom: 1%;
+}
+video
+{
+    margin-left:0;
+}
+video
+{margin-bottom:0;}video{margin-right:0;}video{margin-top:0;}video{padding-left:0;}video{padding-bottom:0;}video{padding-right:0;}video{padding-top:0;}video{border-left-width:0;}video{border-bottom-width:0;}video{border-right-width:0;}video{border-top-width:0;}video{border-left-style:none;}video{border-bottom-style:none;}video{border-right-style:none;}video{border-top-style:none;}video{border-left-color:currentColor;}video{border-bottom-color:currentColor;}video{border-right-color:currentColor;}video{border-top-color:currentColor;}video{border-image:none;}video{font-size:100%;}video{font:inherit;}video{vertical-align:baseline;}
+
+/* crmp */
+.main .block_info .img-crmp 
+{
+	width: 90vh;
+	height: 50vh;
+	background: rgba(242, 20, 61, 1);
+}
+.main .block_info .img-crmp img 
+{
+	width: 100%;
+	height: 100%;
+}
+.main .block_info .img-crmp {
+	width: 100%;
+    height: 55vh;
+    margin-bottom: 1%;
+}
+/* crmp */
+
+.main .block_info .promo_help
+{
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+
+}
+.main .block_info .promo_help p
+{
+    font-style: oblique;
+    font-size: 20px;
+    color: #FFFFFF;
+
+}
+
+
+.main .block_info .promo_help a
+{
+    font-style: oblique;
+    font-size: 10px;
+    background: -moz-linear-gradient(90deg, rgba(181,7,7,1) 0%, rgba(255,132,32,1) 100%);
+	background: -webkit-linear-gradient(90deg, rgba(181,7,7,1) 0%, rgba(255,132,32,1) 100%);
+	background: linear-gradient(90deg, rgba(181,7,7,1) 0%, rgba(255,132,32,1) 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+}
+
+.main .block_info .promo_text {
+	color: white;
+    font-weight: 900;
+    font-size: 57px;
+    line-height: 58px;
+	font-family: "Gotham Pro", sans-serif;
+    margin-top: 5%;
+    text-align: center;
+}
+
+.main .block_info hr
+{
+    background: -moz-linear-gradient(90deg, rgba(255,132,32,1) 0%, rgba(181,7,7,1) 100%);
+	background: -webkit-linear-gradient(90deg, rgba(255,132,32,1) 0%, rgba(181,7,7,1) 100%);
+	background: linear-gradient(90deg, rgba(255,132,32,1) 0%, rgba(181,7,7,1) 100%);
+    transform: rotate(-1deg);
+    width: 100%;
+    height: 2px;
+    margin-bottom: 5%;
+}
+
+.main .promo_button {
+    width: 344px;	
+	height: 47px;
+	background: -moz-linear-gradient(90deg, rgba(255,132,32,1) 0%, rgba(181,7,7,1) 100%);
+	background: -webkit-linear-gradient(90deg, rgba(255,132,32,1) 0%, rgba(181,7,7,1) 100%);
+	background: linear-gradient(90deg, rgba(255,132,32,1) 0%, rgba(181,7,7,1) 100%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 17px;
+	color: white;
+	border: none;
+	border-radius: 50px;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	-ms-border-radius: 50px;
+	-o-border-radius: 50px;
+    margin-top: 21px;
+    margin: 0 auto;
+}
+.main .promo_button{
+        cursor: pointer;
+        box-shadow: 0 0 5vh .3vh rgba(229, 23, 60, .15);
+        text-shadow: 0px 0px 0.1vw rgba(255,255,255,0.7);
+    }
